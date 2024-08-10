@@ -1,0 +1,24 @@
+.closeBtn {
+    position: absolute;
+    background-color: transparent;
+    top: 40px;
+    right: 40px;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    cursor: pointer;
+  }
+
+  .closeIcon {
+    width: 100%;
+    height: 100%;
+    stroke: black;
+    transition: stroke 0.3s;
+  }
+
+  .closeIcon:hover {
+    stroke: var(--buttonHover);
+  }
