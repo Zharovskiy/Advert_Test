@@ -7,5 +7,6 @@ export default defineConfig({
   plugins: [react()],
   build: {
     sourcemap: true,
-  }
+  },
+  base: "/Advert_Test"
 });
