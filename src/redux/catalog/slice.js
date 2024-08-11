@@ -1,8 +1,9 @@
 import { createSlice, isAnyOf } from "@reduxjs/toolkit";
-import { fetchCatalog } from "./operations";
+import { fetchCatalog, fetchCatalogTotal } from "./operations";
 
 const initialState = {
   items: null,
+  totalItem: null,
   loading: false,
   error: null,
 };
@@ -12,12 +13,17 @@ const catalogSlice = createSlice({
   initialState: initialState,
   extraReducers: (builder) => {
     builder
+      .addCase(fetchCatalogTotal.fulfilled, (state, action) => {
+        state.loading = false;
+        state.totalItem = action.payload;
+      })
       .addCase(fetchCatalog.fulfilled, (state, action) => {
         state.loading = false;
         state.items = action.payload;
       })
       .addMatcher(
         isAnyOf(
+          fetchCatalogTotal.pending,
           fetchCatalog.pending,
         ),
         (state) => {
@@ -27,6 +33,7 @@ const catalogSlice = createSlice({
       )
       .addMatcher(
         isAnyOf(
+          fetchCatalogTotal.rejected,
           fetchCatalog.rejected,
         ),
         (state, action) => {

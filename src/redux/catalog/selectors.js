@@ -2,6 +2,7 @@ import { createSelector } from "@reduxjs/toolkit";
 import { selectNameFilter } from "../filters/selectors.js";
 
 export const selectCatalog = (state) => state.catalog.items;
+export const selectCatalogTotal = (state) => state.catalog.totalItem;
 export const selectLoading = (state) => state.catalog.loading;
 export const selectError = (state) => state.catalog.error;
 
