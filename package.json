@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --base=/Advert_Test/",
+    "build": "vite build",
     "lint": "eslint ."
   },
   "dependencies": {
