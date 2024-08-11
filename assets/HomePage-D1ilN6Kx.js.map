@@ -1,0 +1,1 @@
+{"version":3,"file":"HomePage-D1ilN6Kx.js","sources":["../../src/pages/HomePage/HomePage.jsx"],"sourcesContent":["const HomePage = () => {\r\n  return (\r\n    <div>In development</div>\r\n  )\r\n}\r\n\r\nexport default HomePage"],"names":["HomePage","jsx"],"mappings":"wCAAA,MAAMA,EAAW,IAEbC,EAAA,IAAC,OAAI,SAAc,gBAAA,CAAA"}
