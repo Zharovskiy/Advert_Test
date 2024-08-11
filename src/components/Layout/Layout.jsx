@@ -1,5 +1,4 @@
 import { Toaster } from "react-hot-toast";
-import SideBar from "../SideBar/SideBar.jsx";
 import AppBar from "../AppBar/AppBar.jsx";
 
 import css from "./Layout.module.css";
@@ -10,10 +9,7 @@ const Layout = ({ children }) => {
       <AppBar />
         <main>
           <div className={css.container}>
-            <SideBar />
-            <section>
-              {children}
-            </section>
+            {children}
           </div>
         </main>
       <Toaster

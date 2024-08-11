@@ -1,3 +1,8 @@
+.container {
+    display: flex;
+    gap: 64px;
+}
+
 .notCatalog {
     display: flex;
     justify-content: center;

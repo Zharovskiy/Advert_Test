@@ -5,6 +5,7 @@ import { fetchCatalog, fetchCatalogTotal } from "../../redux/catalog/operations"
 import { selectCatalog, selectCatalogTotal, selectLoading } from "../../redux/catalog/selectors";
 
 import CatalogList from "../../components/CatalogList/CatalogList";
+import SearchForm from "../../components/SearchForm/SearchForm.jsx";
 import LoadMoreBtn from "../../components/LoadMoreBtn/LoadMoreBtn";
 import Loader from "../../components/Loader/Loader.jsx";
 
@@ -33,9 +34,14 @@ const CatalogPage = () => {
 
   return (
     <div className={css.container}>
-      <CatalogList data={catalog}/>
-      <Loader loading={loading} />
-      {totalItem !== 0 && page < totalItem/perPage && <LoadMoreBtn />}
+      <aside className={css.sideBox}>
+        <SearchForm />
+      </aside>
+      <section className={css.content}>
+        <CatalogList data={catalog}/>
+        <Loader loading={loading} />
+        {totalItem !== 0 && page < totalItem/perPage && <LoadMoreBtn />}
+      </section>
     </div>
   )
 }

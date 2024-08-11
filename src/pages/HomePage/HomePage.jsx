@@ -1,6 +1,12 @@
+import css from "./HomePage.module.css";
+
 const HomePage = () => {
   return (
-    <div>In development</div>
+    <div className={css.container}>
+      <section>
+        In development
+      </section>
+    </div>  
   )
 }
 
