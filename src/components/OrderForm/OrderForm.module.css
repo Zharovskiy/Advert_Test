@@ -1,0 +1,86 @@
+.box {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    border: 1px solid rgba(16, 24, 40, 0.2);
+    border-radius: 10px;
+    padding: 24px;
+    width: 448px;
+}
+
+.title {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 120%;
+    color: var(--main);
+    margin-bottom: 8px;
+}
+
+.text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: var(--text);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .formGroup {
+    margin-bottom: 14px;
+  }
+  
+  .input,
+  .textarea {
+    border-radius: 10px;
+    padding: 18px;
+    width: 100%;
+    height: 56px;
+    border: none;
+    background: var(--inputs);
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 125%;
+    color: rgba(16, 24, 40, 0.6);
+  }
+  
+  .input:focus,
+  .textarea:focus {
+    border-color: var(--inputs);
+    outline: none;
+  }
+  
+  .textarea {
+    height: 114px;
+    resize: vertical;
+  }
+  
+  .error {
+    margin-top: 2px;
+    color: #ff0000;
+    font-size: 12px;
+  }
+  
+  .submitButton {
+    border-radius: 200px;
+    padding: 16px 60px;
+    width: 160px;
+    height: 56px;
+    background: var(--button);
+    cursor: pointer;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: -0.01em;
+    color: #fff;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submitButton:hover {
+    background: var(--buttonHover);
+  }
+  

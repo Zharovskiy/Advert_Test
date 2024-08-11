@@ -27,7 +27,9 @@ const Modal = ({ isOpen, closeModal, children }) => {
           <use href={`${sprite}#icon-close`} />
         </svg>
       </button>
+      <div className={css.modalContent}>
       {children}
+      </div>
     </ModalReact>
   )
 }

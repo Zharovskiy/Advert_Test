@@ -22,3 +22,24 @@
   .closeIcon:hover {
     stroke: var(--buttonHover);
   }
+
+  .modalContent {
+    overflow-y: auto;
+    margin: 5px 16px 5px 0;
+    padding: 35px 16px 35px 40px;
+  }
+  
+  .modalContent::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .modalContent::-webkit-scrollbar-track {
+    background: white;
+  }
+  
+  .modalContent::-webkit-scrollbar-thumb {
+    background-color: #d9d9d9;
+    border-radius: 7px;
+    transition: background-color 0.3s ease;
+  }
+  
