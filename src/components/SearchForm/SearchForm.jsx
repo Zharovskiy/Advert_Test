@@ -32,8 +32,8 @@ const SearchForm = () => {
               placeholder="Kyiv, Ukraine"
               className={css.input}
               onChange={(e) => {
-                handleChange(e); // Обробка зміни значення форми
-                onSearch(e.target.value); // Передача значення до батьківського компонента
+                handleChange(e);
+                onSearch(e.target.value);
               }}
             />
           </div>
