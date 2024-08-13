@@ -1,14 +1,16 @@
 import { Suspense, lazy } from "react";
 import { Route, Routes } from "react-router-dom";
 
-import Layout from "./components/Layout/Layout.jsx";
-import Loader from "./components/Loader/Loader.jsx";
-import CamperModal from "./components/CamperModal/CamperModal.jsx";
+import Layout from "../Layout/Layout.jsx";
+import Loader from "../Loader/Loader.jsx";
+import CamperModal from "../CamperModal/CamperModal.jsx";
 
-const HomePage = lazy(() => import("./pages/HomePage/HomePage.jsx"));
-const CatalogPage = lazy(() => import("./pages/CatalogPage/CatalogPage.jsx"));
+const HomePage = lazy(() => import("../../pages/HomePage/HomePage.jsx"));
+const CatalogPage = lazy(
+  () => import("../../pages/CatalogPage/CatalogPage.jsx")
+);
 const FavoritesPage = lazy(
-  () => import("./pages/FavoritesPage/FavoritesPage.jsx"),
+  () => import("../../pages/FavoritesPage/FavoritesPage.jsx")
 );
 
 const App = () => {
