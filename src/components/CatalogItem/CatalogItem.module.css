@@ -55,11 +55,20 @@
     height: 24px;
     fill: none;
     stroke: var(--main);
+    transition: 0.3s;
 }
 
 .active {
     fill: var(--button);
     stroke: var(--button);
+}
+
+.iconHeart:hover {
+    stroke: var(--button);
+}
+
+.active:hover {
+    stroke: var(--main);
 }
 
 .reviewsAndLocation {
