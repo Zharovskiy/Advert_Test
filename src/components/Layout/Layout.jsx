@@ -7,11 +7,9 @@ const Layout = ({ children }) => {
   return (
     <>
       <AppBar />
-        <main>
-          <div className={css.container}>
-            {children}
-          </div>
-        </main>
+      <main>
+        <div className={css.container}>{children}</div>
+      </main>
       <Toaster
         position="bottom-right"
         gutter={8}

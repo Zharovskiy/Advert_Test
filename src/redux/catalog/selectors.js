@@ -15,5 +15,5 @@ export const selectFilteredCatalog = createSelector(
         catalog.number.includes(selectNameFilter)
       );
     });
-  }
+  },
 );

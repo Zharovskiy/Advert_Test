@@ -6,173 +6,171 @@
 }
 
 .content {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    gap: 24px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 24px;
 }
 
 .topBox {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .nameAndPrice {
-    width: 100%;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  width: 100%;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .name {
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 125%;
-    color: var(--main);
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 125%;
+  color: var(--main);
 }
 
 .price {
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 125%;
-    color: var(--main);
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 125%;
+  color: var(--main);
 }
 
 .priceAndFavor {
-    display: flex;
-    gap: 10px;
+  display: flex;
+  gap: 10px;
 }
 
 .btnHeart {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .iconHeart {
-    width: 25px;
-    height: 24px;
-    fill: none;
-    stroke: var(--main);
-    transition: 0.3s;
+  width: 25px;
+  height: 24px;
+  fill: none;
+  stroke: var(--main);
+  transition: 0.3s;
 }
 
 .active {
-    fill: var(--button);
-    stroke: var(--button);
+  fill: var(--button);
+  stroke: var(--button);
 }
 
 .iconHeart:hover {
-    stroke: var(--button);
+  stroke: var(--button);
 }
 
 .active:hover {
-    stroke: var(--main);
+  stroke: var(--main);
 }
 
 .reviewsAndLocation {
-    height: 24px;
-    display: flex;
-    gap: 16px;
-    align-items: center;
+  height: 24px;
+  display: flex;
+  gap: 16px;
+  align-items: center;
 }
 
 .reviews {
-    height: 24px;
-    display: flex;
-    gap: 4px;
-    align-items: center;
+  height: 24px;
+  display: flex;
+  gap: 4px;
+  align-items: center;
 }
 
 .iconStar {
-    width: 20px;
-    height: 20px;
-    fill: var(--rating);
+  width: 20px;
+  height: 20px;
+  fill: var(--rating);
 }
 
 .reviewsText {
-    color: var(--main);
-    text-decoration: underline;
-    text-underline-offset: 3px;
+  color: var(--main);
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 .location {
-    height: 24px;
-    display: flex;
-    gap: 4px;
-    align-items: center;
+  height: 24px;
+  display: flex;
+  gap: 4px;
+  align-items: center;
 }
 
 .iconLocation {
-    width: 20px;
-    height: 20px;
-    fill: none;
-    stroke: var(--main);
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: var(--main);
 }
 
 .locationText {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 150%;
-    color: var(--main);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--main);
 }
 
 .description {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 150%;
-    color: var(--text);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--text);
 }
 
 .detailsBox {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
 .details {
-    display: inline-flex;
-    gap: 8px;
-    border-radius: 100px;
-    padding: 12px 18px;
-    height: 44px;
-    background: var(--block-features);
+  display: inline-flex;
+  gap: 8px;
+  border-radius: 100px;
+  padding: 12px 18px;
+  height: 44px;
+  background: var(--block-features);
 }
 
 .iconDetails {
-    width: 20px;
-    height: 20px;
-    fill: none;
-    stroke: var(--main);
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: var(--main);
 }
 
 .detailsText {
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 125%;
-    text-align: center;
-    color: var(--main);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 125%;
+  text-align: center;
+  color: var(--main);
 }
 
 .btn {
-    border-radius: 200px;
-    padding: 16px 40px;
-    width: 166px;
-    height: 56px;
-    background: var(--button);
-    cursor: pointer;
-    font-family: var(--font-family);
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 150%;
-    letter-spacing: -0.01em;
-    color: #fff;
-    transition: 0.3s;
+  border-radius: 200px;
+  padding: 16px 40px;
+  width: 166px;
+  height: 56px;
+  background: var(--button);
+  cursor: pointer;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: -0.01em;
+  color: #fff;
+  transition: 0.3s;
 }
 
 .btn:hover {
-    background: var(--buttonHover);
+  background: var(--buttonHover);
 }
-
-

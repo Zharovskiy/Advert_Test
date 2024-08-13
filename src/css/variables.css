@@ -1,10 +1,10 @@
 :root {
-    --font-family: "Inter", sans-serif;
-	--button: #e44848;
-	--buttonHover: #d84343;
-	--main: #101828;
-	--inputs: #f7f7f7;
-	--block-features: #f2f4f7;
-	--rating: #ffc531;
-	--text: #475467;
+  --font-family: "Inter", sans-serif;
+  --button: #e44848;
+  --buttonHover: #d84343;
+  --main: #101828;
+  --inputs: #f7f7f7;
+  --block-features: #f2f4f7;
+  --rating: #ffc531;
+  --text: #475467;
 }

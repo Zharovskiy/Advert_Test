@@ -1,10 +1,10 @@
-import { useSelector } from "react-redux"
+import { useSelector } from "react-redux";
 import { selectFavorites } from "../../redux/favorites/selectors";
 
 import CatalogList from "../../components/CatalogList/CatalogList";
 import OrderForm from "../../components/OrderForm/OrderForm";
 
-import css from "./FavoritesPage.module.css"
+import css from "./FavoritesPage.module.css";
 
 const FavoritesPage = () => {
   const favorites = useSelector(selectFavorites);
@@ -17,13 +17,13 @@ const FavoritesPage = () => {
         {favorites.length !== 0 ? (
           <CatalogList data={favorites} />
         ) : (
-        <b className={css.notCatalog}>
-          You haven't added anything to your favorites yet
-        </b>
-      )}
+          <b className={css.notCatalog}>
+            You haven't added anything to your favorites yet
+          </b>
+        )}
       </section>
     </div>
-  )
-}
+  );
+};
 
-export default FavoritesPage
+export default FavoritesPage;

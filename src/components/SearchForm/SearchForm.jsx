@@ -1,21 +1,20 @@
-import { Formik, Form, Field } from 'formik';
-import * as Yup from 'yup';
+import { Formik, Form, Field } from "formik";
+import * as Yup from "yup";
 
-import css from './SearchForm.module.css';
+import css from "./SearchForm.module.css";
 
 const validationSchema = Yup.object({
-  query: Yup.string()
+  query: Yup.string(),
 });
 
 const SearchForm = () => {
-  
-    const onSearch = (query) => {
-        console.log('Search query:', query);
-    };
+  const onSearch = (query) => {
+    console.log("Search query:", query);
+  };
 
   return (
     <Formik
-      initialValues={{ query: '' }}
+      initialValues={{ query: "" }}
       validationSchema={validationSchema}
       onSubmit={(values, { resetForm }) => {
         resetForm();
@@ -24,7 +23,9 @@ const SearchForm = () => {
       {({ values, handleChange }) => (
         <Form className={css.form} noValidate>
           <div className={css.formGroup}>
-          <label htmlFor="query" className={css.label}>Location</label>
+            <label htmlFor="query" className={css.label}>
+              Location
+            </label>
             <Field
               type="text"
               id="query"

@@ -1,16 +1,16 @@
 .catalogList {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-  }
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
 
-  .catalogItem {
-    border: 1px solid rgba(16, 24, 40, 0.2);
-    border-radius: 20px;
-    padding: 24px;
-    width: 888px;
-    height: 358px;
-    background: #fff;
-    display: flex;
-    gap: 24px;
-  }
+.catalogItem {
+  border: 1px solid rgba(16, 24, 40, 0.2);
+  border-radius: 20px;
+  padding: 24px;
+  width: 888px;
+  height: 358px;
+  background: #fff;
+  display: flex;
+  gap: 24px;
+}

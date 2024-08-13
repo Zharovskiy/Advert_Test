@@ -4,7 +4,7 @@ import css from "./Rating.module.css";
 
 const Rating = ({ score, maxScore = 5 }) => {
   const fullStars = Math.floor(score);
-  
+
   return (
     <div className={css.rating}>
       {Array.from({ length: maxScore }, (_, index) => (

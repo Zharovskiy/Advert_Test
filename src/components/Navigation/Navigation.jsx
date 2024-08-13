@@ -21,7 +21,7 @@ const Navigation = ({ buildLinkClass }) => {
             Favorites
           </NavLink>
         </li>
-      </ul> 
+      </ul>
     </nav>
   );
 };

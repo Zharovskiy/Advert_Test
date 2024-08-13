@@ -8,7 +8,7 @@ import css from "./CamperReviews.module.css";
 
 const CamperReviews = () => {
   const { reviews } = useSelector(selectCamperModal);
-  
+
   function capitalizeFirstLetter(name) {
     if (!name) return "";
     return name.charAt(0).toUpperCase();
@@ -19,20 +19,24 @@ const CamperReviews = () => {
       <div className={css.leftBox}>
         <div className={css.commentBox}>
           <div className={css.commentTop}>
-            <div className={css.avatar}>{capitalizeFirstLetter(reviews[0].reviewer_name)}</div>
+            <div className={css.avatar}>
+              {capitalizeFirstLetter(reviews[0].reviewer_name)}
+            </div>
             <div className={css.nameAndRatingBox}>
               <p className={css.name}>{reviews[0].reviewer_name}</p>
-              <Rating score={reviews[0].reviewer_rating}/>
+              <Rating score={reviews[0].reviewer_rating} />
             </div>
           </div>
           <p className={css.commentText}>{reviews[0].comment}</p>
         </div>
         <div className={css.commentBox}>
           <div className={css.commentTop}>
-            <div className={css.avatar}>{capitalizeFirstLetter(reviews[1].reviewer_name)}</div>
+            <div className={css.avatar}>
+              {capitalizeFirstLetter(reviews[1].reviewer_name)}
+            </div>
             <div className={css.nameAndRatingBox}>
               <p className={css.name}>{reviews[1].reviewer_name}</p>
-              <Rating score={reviews[1].reviewer_rating}/>
+              <Rating score={reviews[1].reviewer_rating} />
             </div>
           </div>
           <p className={css.commentText}>{reviews[1].comment}</p>
@@ -40,7 +44,7 @@ const CamperReviews = () => {
       </div>
       <OrderForm />
     </div>
-  )
-}
+  );
+};
 
-export default CamperReviews
+export default CamperReviews;

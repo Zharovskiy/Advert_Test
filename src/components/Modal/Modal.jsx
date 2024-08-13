@@ -1,15 +1,14 @@
-import ModalReact from 'react-modal';
-import { useEffect } from 'react';
-import sprite from '../../assets/icons/sprite.svg';
+import ModalReact from "react-modal";
+import { useEffect } from "react";
+import sprite from "../../assets/icons/sprite.svg";
 
 import css from "./Modal.module.css";
 
 const Modal = ({ isOpen, closeModal, children }) => {
-
   useEffect(() => {
-    document.body.style.overflow = isOpen ? 'hidden' : 'auto'; 
+    document.body.style.overflow = isOpen ? "hidden" : "auto";
     return () => {
-      document.body.style.overflow = 'auto';
+      document.body.style.overflow = "auto";
     };
   }, [isOpen]);
 
@@ -27,11 +26,9 @@ const Modal = ({ isOpen, closeModal, children }) => {
           <use href={`${sprite}#icon-close`} />
         </svg>
       </button>
-      <div className={css.modalContent}>
-      {children}
-      </div>
+      <div className={css.modalContent}>{children}</div>
     </ModalReact>
-  )
-}
+  );
+};
 
-export default Modal
+export default Modal;

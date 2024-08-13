@@ -1,11 +1,11 @@
 .container {
-    display: flex;
-    gap: 64px;
+  display: flex;
+  gap: 64px;
 }
 
 .notCatalog {
-    display: flex;
-    justify-content: center;
-    padding-top: 10px;
-    font-size: 24px;
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+  font-size: 24px;
 }

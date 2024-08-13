@@ -1,61 +1,61 @@
 .box {
-    display: flex;
-    gap: 24px;
+  display: flex;
+  gap: 24px;
 }
 
 .leftBox {
-    width: 430px;
-    height: 530px;
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
+  width: 430px;
+  height: 530px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
 .commentBox {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .commentTop {
-    display: flex;
-    align-items: center;
-    gap: 16px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
 }
 
 .avatar {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 60px;
-    width: 60px;
-    height: 60px;
-    background: var(--block-features);
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 125%;
-    color: var(--button);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 60px;
+  width: 60px;
+  height: 60px;
+  background: var(--block-features);
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 125%;
+  color: var(--button);
 }
 
 .nameAndRatingBox {
-    width: 96px;
-    height: 44px;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
+  width: 96px;
+  height: 44px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
 
 .name {
-    font-family: var(--font-family);
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 133%;
-    color: var(--main);
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 133%;
+  color: var(--main);
 }
 
 .commentText {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 150%;
-    color: var(--text);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--text);
 }

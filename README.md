@@ -28,4 +28,4 @@ This is a React-based project aimed at creating a dynamic catalog with paginatio
    ```bash
    git clone https://github.com/yourusername/advert-test.git
    cd advert-test
-
+   ```

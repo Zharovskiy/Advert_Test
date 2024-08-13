@@ -1,6 +1,6 @@
 import { useSearchParams } from "react-router-dom";
 import { useEffect } from "react";
-import { perPage } from "../../const/const.js"
+import { perPage } from "../../const/const.js";
 
 import css from "./LoadMoreBtn.module.css";
 
