@@ -61,7 +61,7 @@ const CamperModal = () => {
                             <p className={css.locationText}>{location}</p>
                         </div>
                     </div>
-                    <p className={css.price}>{`€${price}`}</p>
+                    <p className={css.price}>{`€${price},00`}</p>
                 </div>         
             </div>
             <div className={css.imgBox}>

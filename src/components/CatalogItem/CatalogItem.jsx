@@ -50,7 +50,7 @@ const CatalogItem = ({item}) => {
           <div className={css.nameAndPrice}>
               <h4 className={css.name}>{textShort(name, 30)}</h4>
               <div className={css.priceAndFavor}>
-                  <p className={css.price}>{`€${price}`}</p>
+                  <p className={css.price}>{`€${price},00`}</p>
                   <button className={css.btnHeart} onClick={() => addToFavorites(item)}>
                       <svg className={clsx(css.iconHeart, {
                           [css.active]: favorites.find(fav_Item => fav_Item._id === item._id)
