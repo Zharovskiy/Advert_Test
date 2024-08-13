@@ -1,14 +1,11 @@
 import { useSearchParams } from "react-router-dom";
 import { useEffect } from "react";
-import { useSelector } from "react-redux";
 import { perPage } from "../../const/const.js"
-import { selectCatalogTotal } from "../../redux/catalog/selectors.js";
 
 import css from "./LoadMoreBtn.module.css";
 
 const LoadMoreBtn = () => {
   const [searchParams, setSearchParams] = useSearchParams();
-  const totalItem = useSelector(selectCatalogTotal);
   const page = searchParams.get("page");
 
   useEffect(() => {
@@ -18,8 +15,10 @@ const LoadMoreBtn = () => {
   }, []);
 
   const onLoadMore = () => {
-    setSearchParams({ page: "1", limit: totalItem});
+    const nextPage = parseInt(page) + 1;
+    setSearchParams({ page: nextPage, limit: perPage });
   };
+
   return (
     <button className={css.button} type="button" onClick={onLoadMore}>
       Load more
