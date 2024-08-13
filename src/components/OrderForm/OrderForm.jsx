@@ -69,7 +69,7 @@ const OrderForm = () => {
     <ErrorMessage name="date" component="div" className={css.error} />
   </div>
 
-  <div className={css.formGroup}>
+  <div className={css.formGroupComment}>
     <Field
       as="textarea"
       id="comments"

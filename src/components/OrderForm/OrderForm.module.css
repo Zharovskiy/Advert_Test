@@ -29,7 +29,11 @@
   }
   
   .formGroup {
-    margin-bottom: 14px;
+    height: 70px;
+  }
+
+  .formGroupComment {
+    height: 142px;
   }
   
   .input,
