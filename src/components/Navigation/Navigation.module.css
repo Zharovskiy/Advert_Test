@@ -1,8 +1,16 @@
 .nav {
+  height: 100%;
+}
+
+.list {
     display: flex;
     gap: 40px;
     align-items: center;
     height: 100%;
     flex-grow: 1;
     margin-right: 40px;
-  }
+}
+
+.item {
+  height: 100%;
+}

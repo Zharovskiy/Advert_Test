@@ -5,15 +5,23 @@ import css from "./Navigation.module.css";
 const Navigation = ({ buildLinkClass }) => {
   return (
     <nav className={css.nav}>
-      <NavLink className={buildLinkClass} to="/">
-        Home
-      </NavLink>
-      <NavLink className={buildLinkClass} to="/catalog">
-        Catalog
-      </NavLink>
-      <NavLink className={buildLinkClass} to="/favorites">
-        Favorites
-      </NavLink>
+      <ul className={css.list}>
+        <li className={css.item}>
+          <NavLink className={buildLinkClass} to="/">
+            Home
+          </NavLink>
+        </li>
+        <li className={css.item}>
+          <NavLink className={buildLinkClass} to="/catalog">
+            Catalog
+          </NavLink>
+        </li>
+        <li className={css.item}>
+          <NavLink className={buildLinkClass} to="/favorites">
+            Favorites
+          </NavLink>
+        </li>
+      </ul> 
     </nav>
   );
 };
