@@ -14,7 +14,7 @@ import css from "./CamperModal.module.css";
 const CamperModal = () => {
     const dispatch = useDispatch();
     const item = useSelector(selectCamperModal);
-    const [bottomInfo, setBottomInfo] = useState(null);
+    const [bottomInfo, setBottomInfo] = useState("features");
 
     if (!item) return null;
     const {name, gallery, price, reviews, location, description} = item;
