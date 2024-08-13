@@ -30,7 +30,7 @@
     left: 50%;
     display: flex;
     width: 982px;
-    height: 720px;
+    /* height: 720px;*/
     max-height: 95%;
     border-radius: 20px;
     background-color: rgb(255, 255, 255);
