@@ -1,5 +1,6 @@
 import { useSelector } from "react-redux";
 import { selectCamperModal } from "../../redux/modal/selectors.js";
+import { capitalizeFirstLetter } from "../../utils/stringUtils.js";
 import sprite from "../../assets/icons/sprite.svg";
 
 import OrderForm from "../OrderForm/OrderForm.jsx";
@@ -94,7 +95,7 @@ const CamperFeatures = () => {
           <div className={css.detail}>
             <div className={css.row}>
               <p className={css.detailText}>Form</p>
-              <p className={css.detailText}>{form}</p>
+              <p className={css.detailText}>{capitalizeFirstLetter(form)}</p>
             </div>
             <div className={css.row}>
               <p className={css.detailText}>Length</p>

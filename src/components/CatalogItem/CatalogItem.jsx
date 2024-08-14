@@ -2,6 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { selectFavorites } from "../../redux/favorites/selectors";
 import { setFavoriteItems } from "../../redux/favorites/slice";
 import { modalState } from "../../redux/modal/slice";
+import { capitalizeFirstLetter, truncateText } from "../../utils/stringUtils";
 import clsx from "clsx";
 import sprite from "../../assets/icons/sprite.svg";
 
@@ -31,13 +32,6 @@ const CatalogItem = ({ item }) => {
     return totalScore / reviews.length;
   };
 
-  const textShort = (text, number) => {
-    if (text.length <= number) {
-      return text;
-    }
-    return text.slice(0, number) + "...";
-  };
-
   const addToFavorites = (item) => {
     const isFavorite = favorites.some((fav_Item) => fav_Item._id === item._id);
 
@@ -46,8 +40,8 @@ const CatalogItem = ({ item }) => {
     } else {
       dispatch(
         setFavoriteItems(
-          favorites.filter((fav_Item) => fav_Item._id !== item._id),
-        ),
+          favorites.filter((fav_Item) => fav_Item._id !== item._id)
+        )
       );
     }
   };
@@ -62,7 +56,7 @@ const CatalogItem = ({ item }) => {
       <div className={css.content}>
         <div className={css.topBox}>
           <div className={css.nameAndPrice}>
-            <h4 className={css.name}>{textShort(name, 30)}</h4>
+            <h4 className={css.name}>{truncateText(name, 30)}</h4>
             <div className={css.priceAndFavor}>
               <p className={css.price}>{`€${price},00`}</p>
               <button
@@ -72,7 +66,7 @@ const CatalogItem = ({ item }) => {
                 <svg
                   className={clsx(css.iconHeart, {
                     [css.active]: favorites.find(
-                      (fav_Item) => fav_Item._id === item._id,
+                      (fav_Item) => fav_Item._id === item._id
                     ),
                   })}
                 >
@@ -98,7 +92,7 @@ const CatalogItem = ({ item }) => {
             </div>
           </div>
         </div>
-        <p className={css.description}>{textShort(description, 65)}</p>
+        <p className={css.description}>{truncateText(description, 65)}</p>
         <div className={css.detailsBox}>
           <div className={css.details}>
             <svg className={css.iconDetails}>
@@ -110,13 +104,15 @@ const CatalogItem = ({ item }) => {
             <svg className={css.iconDetails}>
               <use href={`${sprite}#icon-transmission`} />
             </svg>
-            <p className={css.detailsText}>{transmission}</p>
+            <p className={css.detailsText}>
+              {capitalizeFirstLetter(transmission)}
+            </p>
           </div>
           <div className={css.details}>
             <svg className={css.iconDetails}>
               <use href={`${sprite}#icon-petrol`} />
             </svg>
-            <p className={css.detailsText}>{engine}</p>
+            <p className={css.detailsText}>{capitalizeFirstLetter(engine)}</p>
           </div>
           <div className={css.details}>
             <svg className={css.iconDetails}>
