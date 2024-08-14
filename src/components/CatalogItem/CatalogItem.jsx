@@ -3,6 +3,7 @@ import { selectFavorites } from "../../redux/favorites/selectors";
 import { setFavoriteItems } from "../../redux/favorites/slice";
 import { modalState } from "../../redux/modal/slice";
 import { capitalizeFirstLetter, truncateText } from "../../utils/stringUtils";
+import { averageScore } from "../../utils/rating";
 import clsx from "clsx";
 import sprite from "../../assets/icons/sprite.svg";
 
@@ -23,14 +24,6 @@ const CatalogItem = ({ item }) => {
     engine,
     details,
   } = item;
-
-  const averageScore = (reviews) => {
-    if (reviews.length === 0) return 0;
-    const totalScore = reviews.reduce((sum, review) => {
-      return sum + review.reviewer_rating;
-    }, 0);
-    return totalScore / reviews.length;
-  };
 
   const addToFavorites = (item) => {
     const isFavorite = favorites.some((fav_Item) => fav_Item._id === item._id);

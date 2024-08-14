@@ -3,6 +3,8 @@ import Modal from "../Modal/Modal.jsx";
 import { useDispatch, useSelector } from "react-redux";
 import { selectCamperModal } from "../../redux/modal/selectors.js";
 import { modalState } from "../../redux/modal/slice.js";
+import { truncateText } from "../../utils/stringUtils.js";
+import { averageScore } from "../../utils/rating.js";
 import clsx from "clsx";
 import sprite from "../../assets/icons/sprite.svg";
 
@@ -19,21 +21,6 @@ const CamperModal = () => {
   if (!item) return null;
   const { name, gallery, price, reviews, location, description } = item;
 
-  const averageScore = (reviews) => {
-    if (reviews.length === 0) return 0;
-    const totalScore = reviews.reduce((sum, review) => {
-      return sum + review.reviewer_rating;
-    }, 0);
-    return totalScore / reviews.length;
-  };
-
-  const textShort = (text, number) => {
-    if (text.length <= number) {
-      return text;
-    }
-    return text.slice(0, number) + "...";
-  };
-
   const closeModal = () => {
     setBottomInfo(null);
     dispatch(modalState(null));
@@ -43,7 +30,7 @@ const CamperModal = () => {
     <Modal isOpen={Boolean(item)} closeModal={closeModal}>
       <div className={css.content}>
         <div className={css.topBox}>
-          <h4 className={css.name}>{textShort(name, 30)}</h4>
+          <h4 className={css.name}>{truncateText(name, 30)}</h4>
           <div className={css.reviewsAndPriceBox}>
             <div className={css.reviewsAndLocation}>
               <div className={css.reviews}>
