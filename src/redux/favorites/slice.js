@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import toast from "react-hot-toast";
 
 const initialState = {
   items: [],
@@ -11,7 +12,19 @@ const favoritesSlice = createSlice({
   initialState: initialState,
   reducers: {
     setFavoriteItems(state, action) {
-      state.items = action.payload;
+      const isFavorite = state.items.some(
+        (fav_Item) => fav_Item._id === action.payload._id
+      );
+
+      if (!isFavorite) {
+        state.items = [...state.items, action.payload];
+        toast("Added to favorites");
+      } else {
+        state.items = state.items.filter(
+          (fav_Item) => fav_Item._id !== action.payload._id
+        );
+        toast("Removed from favorites");
+      }
     },
     setFavoriteLoading(state, action) {
       state.loading = action.payload;

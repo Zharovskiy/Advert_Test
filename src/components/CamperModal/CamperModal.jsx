@@ -22,7 +22,7 @@ const CamperModal = () => {
   const { name, gallery, price, reviews, location, description } = item;
 
   const closeModal = () => {
-    setBottomInfo(null);
+    setBottomInfo("features");
     dispatch(modalState(null));
   };
 

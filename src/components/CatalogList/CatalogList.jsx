@@ -1,3 +1,5 @@
+import { nanoid } from "nanoid";
+
 import CatalogItem from "../CatalogItem/CatalogItem";
 
 import css from "./CatalogList.module.css";
@@ -8,7 +10,7 @@ const CatalogList = ({ data }) => {
       {data &&
         data.map(({ ...item }) => {
           return (
-            <li className={css.catalogItem} key={item._id}>
+            <li className={css.catalogItem} key={nanoid()}>
               <CatalogItem item={item} />
             </li>
           );

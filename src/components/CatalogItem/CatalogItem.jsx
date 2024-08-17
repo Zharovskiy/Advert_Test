@@ -25,20 +25,6 @@ const CatalogItem = ({ item }) => {
     details,
   } = item;
 
-  const addToFavorites = (item) => {
-    const isFavorite = favorites.some((fav_Item) => fav_Item._id === item._id);
-
-    if (!isFavorite) {
-      dispatch(setFavoriteItems([...favorites, item]));
-    } else {
-      dispatch(
-        setFavoriteItems(
-          favorites.filter((fav_Item) => fav_Item._id !== item._id)
-        )
-      );
-    }
-  };
-
   const openModal = (item) => {
     dispatch(modalState(item));
   };
@@ -54,7 +40,7 @@ const CatalogItem = ({ item }) => {
               <p className={css.price}>{`€${price},00`}</p>
               <button
                 className={css.btnHeart}
-                onClick={() => addToFavorites(item)}
+                onClick={() => dispatch(setFavoriteItems(item))}
               >
                 <svg
                   className={clsx(css.iconHeart, {
