@@ -3,8 +3,13 @@
   gap: 64px;
 }
 
+.sideBox {
+  width: 360px;
+}
+
 .content {
   display: flex;
   flex-direction: column;
   gap: 50px;
+  width: 888px;
 }

@@ -120,7 +120,9 @@ const CamperFeatures = () => {
           </div>
         </div>
       </div>
-      <OrderForm />
+      <div className={css.boxOrderForm}>
+        <OrderForm />
+      </div>
     </div>
   );
 };

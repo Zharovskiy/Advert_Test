@@ -59,3 +59,7 @@
   line-height: 150%;
   color: var(--text);
 }
+
+.boxOrderForm {
+  width: 448px;
+}

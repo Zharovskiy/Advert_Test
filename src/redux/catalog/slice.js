@@ -19,6 +19,7 @@ const catalogSlice = createSlice({
       })
       .addCase(fetchCatalog.fulfilled, (state, action) => {
         state.loading = false;
+
         state.items = [...state.items, ...action.payload];
       })
       .addMatcher(
@@ -26,14 +27,14 @@ const catalogSlice = createSlice({
         (state) => {
           state.loading = true;
           state.error = null;
-        },
+        }
       )
       .addMatcher(
         isAnyOf(fetchCatalogTotal.rejected, fetchCatalog.rejected),
         (state, action) => {
           state.loading = false;
           state.error = action.payload;
-        },
+        }
       );
   },
 });

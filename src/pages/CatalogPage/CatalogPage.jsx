@@ -11,12 +11,11 @@ import {
   selectLoading,
 } from "../../redux/catalog/selectors";
 
+import ContentMarkup from "../../components/ContentMarkup/ContentMarkup.jsx";
 import CatalogList from "../../components/CatalogList/CatalogList";
 import SearchForm from "../../components/SearchForm/SearchForm.jsx";
 import LoadMoreBtn from "../../components/LoadMoreBtn/LoadMoreBtn";
 import Loader from "../../components/Loader/Loader.jsx";
-
-import css from "./CatalogPage.module.css";
 
 const CatalogPage = () => {
   const dispatch = useDispatch();
@@ -40,16 +39,16 @@ const CatalogPage = () => {
   }, [page, perPage]);
 
   return (
-    <div className={css.container}>
-      <aside className={css.sideBox}>
-        <SearchForm />
-      </aside>
-      <section className={css.content}>
-        <CatalogList data={catalog} />
-        <Loader loading={loading} />
-        {totalItem !== 0 && page < totalItem / perPage && <LoadMoreBtn />}
-      </section>
-    </div>
+    <ContentMarkup
+      aside={<SearchForm />}
+      content={
+        <>
+          <CatalogList data={catalog} />
+          <Loader loading={loading} />
+          {totalItem !== 0 && page < totalItem / perPage && <LoadMoreBtn />}
+        </>
+      }
+    />
   );
 };
 

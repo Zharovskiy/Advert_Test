@@ -38,7 +38,9 @@ const CamperReviews = () => {
           <p className={css.commentText}>{reviews[1].comment}</p>
         </div>
       </div>
-      <OrderForm />
+      <div className={css.boxOrderForm}>
+        <OrderForm />
+      </div>
     </div>
   );
 };
