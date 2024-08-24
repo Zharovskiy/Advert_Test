@@ -19,8 +19,7 @@ const catalogSlice = createSlice({
       })
       .addCase(fetchCatalog.fulfilled, (state, action) => {
         state.loading = false;
-
-        state.items = [...state.items, ...action.payload];
+        state.items = action.payload;
       })
       .addMatcher(
         isAnyOf(fetchCatalogTotal.pending, fetchCatalog.pending),

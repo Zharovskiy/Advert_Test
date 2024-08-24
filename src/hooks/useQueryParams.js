@@ -29,7 +29,28 @@ const useQueryParams = () => {
     return params;
   };
 
-  return { getParam, setParam, removeParam, getAllParams };
+  const setAllParams = (values) => {
+    let shouldUpdate = false;
+
+    Object.keys(values).forEach((key) => {
+      const value = values[key];
+      if (value || value === "") {
+        if (searchParams.get(key) !== value) {
+          searchParams.set(key, value);
+          shouldUpdate = true;
+        }
+      } else if (searchParams.has(key)) {
+        searchParams.delete(key);
+        shouldUpdate = true;
+      }
+    });
+
+    if (shouldUpdate) {
+      setSearchParams(searchParams);
+    }
+  };
+
+  return { getParam, setParam, removeParam, getAllParams, setAllParams };
 };
 
 export default useQueryParams;

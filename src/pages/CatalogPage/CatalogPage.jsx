@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useMemo } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {
   fetchCatalog,
@@ -10,6 +10,7 @@ import {
   selectLoading,
 } from "../../redux/catalog/selectors";
 import useQueryParams from "../../hooks/useQueryParams.js";
+import { useSearchParams } from "react-router-dom";
 import { perPage } from "../../const/const.js";
 
 import ContentMarkup from "../../components/ContentMarkup/ContentMarkup.jsx";
@@ -23,16 +24,19 @@ const CatalogPage = () => {
   const catalog = useSelector(selectCatalog);
   const loading = useSelector(selectLoading);
   const totalItem = useSelector(selectCatalogTotal);
-  const { getParam, setParam } = useQueryParams();
-  const page = getParam("page");
-  const limit = getParam("limit");
+  const { setParam, getAllParams } = useQueryParams();
+  const [searchParams] = useSearchParams();
+
+  const params = useMemo(() => getAllParams(), [searchParams]);
+
+  const { page, limit } = params;
 
   useEffect(() => {
     if (!page && !limit) {
       setParam("page", 1);
       setParam("limit", perPage);
     }
-  }, []);
+  }, [page, limit]);
 
   useEffect(() => {
     if (!totalItem) {
@@ -42,9 +46,9 @@ const CatalogPage = () => {
 
   useEffect(() => {
     if (page && limit) {
-      dispatch(fetchCatalog({ page, limit }));
+      dispatch(fetchCatalog(params));
     }
-  }, [page, limit]);
+  }, [params]);
 
   return (
     <ContentMarkup

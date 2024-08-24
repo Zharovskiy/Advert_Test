@@ -15,9 +15,10 @@ export const fetchCatalogTotal = createAsyncThunk(
 
 export const fetchCatalog = createAsyncThunk(
   "catalog/fetchAll",
-  async (pagination, thunkAPI) => {
+  async (params, thunkAPI) => {
     try {
-      const { page, limit } = pagination;
+      const { page, limit } = params;
+      console.log("params: ", params);
       const { data } = await instance.get(
         `/catalog?page=${page}&limit=${limit}`
       );
