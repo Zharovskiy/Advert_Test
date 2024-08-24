@@ -10,20 +10,20 @@ export const fetchCatalogTotal = createAsyncThunk(
     } catch (e) {
       return thunkAPI.rejectWithValue(e.message);
     }
-  },
+  }
 );
 
 export const fetchCatalog = createAsyncThunk(
   "catalog/fetchAll",
   async (pagination, thunkAPI) => {
     try {
-      const { page, perPage } = pagination;
+      const { page, limit } = pagination;
       const { data } = await instance.get(
-        `/catalog?page=${page}&limit=${perPage}`,
+        `/catalog?page=${page}&limit=${limit}`
       );
       return data;
     } catch (e) {
       return thunkAPI.rejectWithValue(e.message);
     }
-  },
+  }
 );
