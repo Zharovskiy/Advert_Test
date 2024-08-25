@@ -15,7 +15,7 @@ const FavoritesPage = () => {
       content={
         <>
           {favorites.length !== 0 ? (
-            <CatalogList data={favorites} />
+            <CatalogList catalog={favorites} />
           ) : (
             <b className={css.notCatalog}>
               You haven't added anything to your favorites yet

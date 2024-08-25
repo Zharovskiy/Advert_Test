@@ -35,7 +35,7 @@ const CatalogItem = ({ item }) => {
       <div className={css.content}>
         <div className={css.topBox}>
           <div className={css.nameAndPrice}>
-            <h4 className={css.name}>{truncateText(name, 30)}</h4>
+            <h4 className={css.name}>{truncateText(name, 29)}</h4>
             <div className={css.priceAndFavor}>
               <p className={css.price}>{`€${price},00`}</p>
               <button

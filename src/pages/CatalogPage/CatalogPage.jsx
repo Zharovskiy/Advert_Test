@@ -1,17 +1,14 @@
 import { useEffect, useMemo } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import {
-  fetchCatalog,
-  fetchCatalogTotal,
-} from "../../redux/catalog/operations";
+import { fetchCatalog } from "../../redux/catalog/operations";
 import {
   selectCatalog,
-  selectCatalogTotal,
+  selectPagination,
   selectLoading,
 } from "../../redux/catalog/selectors";
 import useQueryParams from "../../hooks/useQueryParams.js";
 import { useSearchParams } from "react-router-dom";
-import { perPage } from "../../const/const.js";
+import { PER_PAGE } from "../../const/const.js";
 
 import ContentMarkup from "../../components/ContentMarkup/ContentMarkup.jsx";
 import Loader from "../../components/Loader/Loader.jsx";
@@ -23,29 +20,23 @@ const CatalogPage = () => {
   const dispatch = useDispatch();
   const catalog = useSelector(selectCatalog);
   const loading = useSelector(selectLoading);
-  const totalItem = useSelector(selectCatalogTotal);
+  const { totalItems } = useSelector(selectPagination);
   const { setParam, getAllParams } = useQueryParams();
   const [searchParams] = useSearchParams();
 
   const params = useMemo(() => getAllParams(), [searchParams]);
 
-  const { page, limit } = params;
+  const { page, perPage } = params;
 
   useEffect(() => {
-    if (!page && !limit) {
+    if (!page && !perPage) {
       setParam("page", 1);
-      setParam("limit", perPage);
+      setParam("perPage", PER_PAGE);
     }
-  }, [page, limit]);
+  }, [page, perPage]);
 
   useEffect(() => {
-    if (!totalItem) {
-      dispatch(fetchCatalogTotal());
-    }
-  }, [totalItem]);
-
-  useEffect(() => {
-    if (page && limit) {
+    if (page && perPage) {
       dispatch(fetchCatalog(params));
     }
   }, [params]);
@@ -55,9 +46,9 @@ const CatalogPage = () => {
       aside={<SearchForm />}
       content={
         <>
-          <CatalogList data={catalog} />
+          <CatalogList catalog={catalog} />
           <Loader loading={loading} />
-          {totalItem !== 0 && page < totalItem / limit && <LoadMoreBtn />}
+          {totalItems !== 0 && page < totalItems / perPage && <LoadMoreBtn />}
         </>
       }
     />

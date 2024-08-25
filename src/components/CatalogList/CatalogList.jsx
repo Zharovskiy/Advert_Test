@@ -4,11 +4,11 @@ import CatalogItem from "../CatalogItem/CatalogItem";
 
 import css from "./CatalogList.module.css";
 
-const CatalogList = ({ data }) => {
+const CatalogList = ({ catalog }) => {
   return (
     <ul className={css.catalogList}>
-      {data &&
-        data.map(({ ...item }) => {
+      {catalog &&
+        catalog.map(({ ...item }) => {
           return (
             <li className={css.catalogItem} key={nanoid()}>
               <CatalogItem item={item} />

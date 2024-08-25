@@ -53,7 +53,7 @@ const SearchForm = () => {
               type="text"
               id="location"
               name="location"
-              placeholder="Kyiv, Ukraine"
+              placeholder="Ukraine, Kyiv"
               className={css.input}
             />
           </div>
