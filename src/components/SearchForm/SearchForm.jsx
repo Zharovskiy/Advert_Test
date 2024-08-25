@@ -11,6 +11,7 @@ const validationSchema = Yup.object({
   kitchen: Yup.boolean(),
   TV: Yup.boolean(),
   shower: Yup.boolean(),
+  toilet: Yup.boolean(),
   formCamper: Yup.string(),
 });
 
@@ -25,6 +26,7 @@ const SearchForm = () => {
       kitchen: getParam("kitchen") === "true" || false,
       TV: getParam("TV") === "true" || false,
       shower: getParam("shower") === "true" || false,
+      toilet: getParam("toilet") === "true" || false,
       formCamper: getParam("formCamper") || "",
     };
   };
@@ -76,6 +78,10 @@ const SearchForm = () => {
             <label>
               <Field type="checkbox" name="shower" />
               Shower
+            </label>
+            <label>
+              <Field type="checkbox" name="toilet" />
+              Toilet
             </label>
           </div>
 

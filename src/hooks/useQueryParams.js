@@ -34,7 +34,7 @@ const useQueryParams = () => {
 
     Object.keys(values).forEach((key) => {
       const value = values[key];
-      if (value || value === "") {
+      if (value) {
         if (searchParams.get(key) !== value) {
           searchParams.set(key, value);
           shouldUpdate = true;
