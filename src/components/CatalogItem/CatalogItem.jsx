@@ -6,6 +6,7 @@ import { capitalizeFirstLetter, truncateText } from "../../utils/stringUtils";
 import { averageScore } from "../../utils/rating";
 import clsx from "clsx";
 import sprite from "../../assets/icons/sprite.svg";
+import ac from "../../assets/ac.svg";
 
 import css from "./CatalogItem.module.css";
 
@@ -74,7 +75,7 @@ const CatalogItem = ({ item }) => {
         <p className={css.description}>{truncateText(description, 65)}</p>
         <div className={css.detailsBox}>
           <div className={css.details}>
-            <svg className={css.iconDetails}>
+            <svg className={css.icon}>
               <use href={`${sprite}#icon-adults`} />
             </svg>
             <p className={css.detailsText}>{`${adults} adults`}</p>
@@ -88,7 +89,7 @@ const CatalogItem = ({ item }) => {
             </p>
           </div>
           <div className={css.details}>
-            <svg className={css.iconDetails}>
+            <svg className={css.icon}>
               <use href={`${sprite}#icon-petrol`} />
             </svg>
             <p className={css.detailsText}>{capitalizeFirstLetter(engine)}</p>
@@ -106,9 +107,7 @@ const CatalogItem = ({ item }) => {
             <p className={css.detailsText}>{`${details.beds} Beds`}</p>
           </div>
           <div className={css.details}>
-            <svg className={css.iconDetails}>
-              <use href={`${sprite}#icon-ac`} />
-            </svg>
+            <img src={ac} width="20" height="20" />
             <p className={css.detailsText}>AC</p>
           </div>
         </div>

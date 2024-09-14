@@ -2,6 +2,7 @@ import { Formik, Form, Field } from "formik";
 import * as Yup from "yup";
 import useQueryParams from "../../hooks/useQueryParams";
 import sprite from "../../assets/icons/sprite.svg";
+import ac from "../../assets/ac.svg";
 
 import css from "./SearchForm.module.css";
 
@@ -92,15 +93,7 @@ const SearchForm = () => {
                       id="airConditioner"
                     />
                     <label className={css.labelBox} htmlFor="airConditioner">
-                      <span>
-                        <svg
-                          className={css.airConditioner}
-                          width="30"
-                          height="25"
-                        >
-                          <use href={`${sprite}#icon-ac`}></use>
-                        </svg>
-                      </span>
+                      <img src={ac} width="30" height="25" />
                       <span className={css.checkBoxText}>AC</span>
                     </label>
                   </div>
@@ -113,15 +106,9 @@ const SearchForm = () => {
                       id="transmission"
                     />
                     <label className={css.labelBox} htmlFor="transmission">
-                      <span>
-                        <svg
-                          className={css.airConditioner}
-                          width="30"
-                          height="25"
-                        >
-                          <use href={`${sprite}#icon-transmission`}></use>
-                        </svg>
-                      </span>
+                      <svg className={css.icon} width="30" height="25">
+                        <use href={`${sprite}#icon-transmission`}></use>
+                      </svg>
                       <span className={css.checkBoxText}>Automatic</span>
                     </label>
                   </div>
@@ -134,15 +121,9 @@ const SearchForm = () => {
                       id="kitchen"
                     />
                     <label className={css.labelBox} htmlFor="kitchen">
-                      <span>
-                        <svg
-                          className={css.airConditioner}
-                          width="30"
-                          height="25"
-                        >
-                          <use href={`${sprite}#icon-kitchen`}></use>
-                        </svg>
-                      </span>
+                      <svg className={css.icon} width="30" height="25">
+                        <use href={`${sprite}#icon-kitchen`}></use>
+                      </svg>
                       <span className={css.checkBoxText}>Kitchen</span>
                     </label>
                   </div>
@@ -155,15 +136,9 @@ const SearchForm = () => {
                       id="TV"
                     />
                     <label className={css.labelBox} htmlFor="TV">
-                      <span>
-                        <svg
-                          className={css.airConditioner}
-                          width="30"
-                          height="25"
-                        >
-                          <use href={`${sprite}#icon-tv`}></use>
-                        </svg>
-                      </span>
+                      <svg className={css.icon} width="30" height="25">
+                        <use href={`${sprite}#icon-tv`}></use>
+                      </svg>
                       <span className={css.checkBoxText}>TV</span>
                     </label>
                   </div>
@@ -176,15 +151,9 @@ const SearchForm = () => {
                       id="shower"
                     />
                     <label className={css.labelBox} htmlFor="shower">
-                      <span>
-                        <svg
-                          className={css.airConditioner}
-                          width="30"
-                          height="25"
-                        >
-                          <use href={`${sprite}#icon-shower`}></use>
-                        </svg>
-                      </span>
+                      <svg className={css.icon} width="30" height="25">
+                        <use href={`${sprite}#icon-shower`}></use>
+                      </svg>
                       <span className={css.checkBoxText}>Shower/WC</span>
                     </label>
                   </div>
@@ -204,15 +173,9 @@ const SearchForm = () => {
                       id="panelTruck"
                     />
                     <label className={css.labelBox} htmlFor="panelTruck">
-                      <span>
-                        <svg
-                          className={css.airConditioner}
-                          width="40"
-                          height="29"
-                        >
-                          <use href={`${sprite}#icon-camper3`}></use>
-                        </svg>
-                      </span>
+                      <svg className={css.iconForm} width="40" height="29">
+                        <use href={`${sprite}#icon-camper3`}></use>
+                      </svg>
                       <span className={css.checkBoxText}>Van</span>
                     </label>
                   </div>
@@ -226,15 +189,9 @@ const SearchForm = () => {
                       id="fullyIntegrated"
                     />
                     <label className={css.labelBox} htmlFor="fullyIntegrated">
-                      <span>
-                        <svg
-                          className={css.airConditioner}
-                          width="40"
-                          height="29"
-                        >
-                          <use href={`${sprite}#icon-camper2`}></use>
-                        </svg>
-                      </span>
+                      <svg className={css.iconForm} width="40" height="29">
+                        <use href={`${sprite}#icon-camper2`}></use>
+                      </svg>
                       <span className={css.checkBoxText}>Fully Integrated</span>
                     </label>
                   </div>
@@ -248,15 +205,9 @@ const SearchForm = () => {
                       id="alcove"
                     />
                     <label className={css.labelBox} htmlFor="alcove">
-                      <span>
-                        <svg
-                          className={css.airConditioner}
-                          width="40"
-                          height="29"
-                        >
-                          <use href={`${sprite}#icon-camper`}></use>
-                        </svg>
-                      </span>
+                      <svg className={css.iconForm} width="40" height="29">
+                        <use href={`${sprite}#icon-camper`}></use>
+                      </svg>
                       <span className={css.checkBoxText}>Alcove</span>
                     </label>
                   </div>

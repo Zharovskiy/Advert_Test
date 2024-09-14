@@ -2,6 +2,7 @@ import { useSelector } from "react-redux";
 import { selectCamperModal } from "../../redux/modal/selectors.js";
 import { capitalizeFirstLetter } from "../../utils/stringUtils.js";
 import sprite from "../../assets/icons/sprite.svg";
+import ac from "../../assets/ac.svg";
 
 import OrderForm from "../OrderForm/OrderForm.jsx";
 
@@ -27,7 +28,7 @@ const CamperFeatures = () => {
       <div className={css.leftBox}>
         <div className={css.detailsBox}>
           <div className={css.details}>
-            <svg className={css.iconDetails}>
+            <svg className={css.icon}>
               <use href={`${sprite}#icon-adults`} />
             </svg>
             <p className={css.detailsText}>{`${adults} adults`}</p>
@@ -39,7 +40,7 @@ const CamperFeatures = () => {
             <p className={css.detailsText}>{transmission}</p>
           </div>
           <div className={css.details}>
-            <svg className={css.iconDetails}>
+            <svg className={css.icon}>
               <use href={`${sprite}#icon-petrol`} />
             </svg>
             <p className={css.detailsText}>{engine}</p>
@@ -57,9 +58,7 @@ const CamperFeatures = () => {
             <p className={css.detailsText}>{`${details.beds} Beds`}</p>
           </div>
           <div className={css.details}>
-            <svg className={css.iconDetails}>
-              <use href={`${sprite}#icon-ac`} />
-            </svg>
+            <img src={ac} width="20" height="20" />
             <p className={css.detailsText}>AC</p>
           </div>
           <div className={css.details}>

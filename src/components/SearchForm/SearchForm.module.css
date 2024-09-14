@@ -117,7 +117,7 @@ input[type="checkbox"]:checked + label {
   border: 1px solid var(--button);
 }
 
-.airConditioner {
+.icon {
   fill: none;
   stroke: var(--main);
 }
@@ -141,6 +141,10 @@ input[type="checkbox"]:checked + label {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+}
+
+.iconForm {
+  fill: var(--main);
 }
 
 input[type="radio"]:checked + label {
