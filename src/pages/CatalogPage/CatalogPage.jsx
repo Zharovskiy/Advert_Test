@@ -46,7 +46,7 @@ const CatalogPage = () => {
       aside={<SearchForm />}
       content={
         <>
-          <CatalogList catalog={catalog} />
+          {!loading && <CatalogList catalog={catalog} />}
           <Loader loading={loading} />
           {totalItems !== 0 && page < totalItems / perPage && <LoadMoreBtn />}
         </>
