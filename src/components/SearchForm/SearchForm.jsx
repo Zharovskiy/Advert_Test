@@ -47,7 +47,7 @@ const SearchForm = () => {
 
   const onReset = (resetForm) => {
     setAllParams(resetValues);
-    resetForm();
+    resetForm({ values: resetValues });
   };
 
   return (
