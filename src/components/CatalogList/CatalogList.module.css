@@ -14,3 +14,13 @@
   display: flex;
   gap: 24px;
 }
+
+.notFound {
+  text-align: center;
+  margin-top: 50px;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 150%;
+  color: var(--text);
+}
