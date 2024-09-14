@@ -147,6 +147,11 @@ input[type="radio"]:checked + label {
   border: 1px solid var(--button);
 }
 
+.btnBox {
+  display: flex;
+  justify-content: space-between;
+}
+
 .submitButton {
   border-radius: 200px;
   padding: 16px 60px;

@@ -12,7 +12,6 @@ const validationSchema = Yup.object({
   kitchen: Yup.boolean(),
   TV: Yup.boolean(),
   shower: Yup.boolean(),
-  toilet: Yup.boolean(),
   formCamper: Yup.string(),
 });
 
@@ -27,13 +26,26 @@ const SearchForm = () => {
       kitchen: getParam("kitchen") === "true" || false,
       TV: getParam("TV") === "true" || false,
       shower: getParam("shower") === "true" || false,
-      toilet: getParam("toilet") === "true" || false,
       formCamper: getParam("formCamper") || "",
     };
   };
 
   const onSearch = (values) => {
     setAllParams(values);
+  };
+
+  const onReset = (resetForm) => {
+    const resetValues = {
+      location: "",
+      airConditioner: false,
+      transmission: false,
+      kitchen: false,
+      TV: false,
+      shower: false,
+      formCamper: "",
+    };
+    setAllParams(resetValues);
+    resetForm();
   };
 
   return (
@@ -44,7 +56,7 @@ const SearchForm = () => {
         onSearch(values);
       }}
     >
-      {() => (
+      {({ resetForm }) => (
         <Form className={css.form} noValidate>
           <div className={css.locationGroup}>
             <label className={css.locationLabel} htmlFor="location">
@@ -138,10 +150,11 @@ const SearchForm = () => {
                     <Field
                       className={css.checkboxVisuallyHidden}
                       type="checkbox"
-                      name="tv"
-                      id="tv"
+                      name="TV"
+                      id="TV"
                     />
-                    <label className={css.labelBox} htmlFor="tv">
+                    <label className={css.labelBox} htmlFor="TV">
+                      S
                       <span>
                         <svg
                           className={css.airConditioner}
@@ -251,10 +264,18 @@ const SearchForm = () => {
               </div>
             </div>
           </div>
-
-          <button type="submit" className={css.submitButton}>
-            Search
-          </button>
+          <div className={css.btnBox}>
+            <button type="submit" className={css.submitButton}>
+              Search
+            </button>
+            <button
+              type="button"
+              className={css.submitButton}
+              onClick={() => onReset(resetForm)}
+            >
+              Reset
+            </button>
+          </div>
         </Form>
       )}
     </Formik>
