@@ -17,7 +17,7 @@ const validationSchema = Yup.object({
 });
 
 const SearchForm = () => {
-  const { getParam, setAllParams } = useQueryParams();
+  const { getParam, setParam, setAllParams } = useQueryParams();
 
   const getInitialValuesFromParams = () => {
     return {
@@ -42,6 +42,7 @@ const SearchForm = () => {
   };
 
   const onSearch = (values) => {
+    setParam("page", 1);
     setAllParams(values);
   };
 
