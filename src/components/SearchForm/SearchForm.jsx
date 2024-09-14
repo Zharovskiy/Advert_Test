@@ -30,20 +30,21 @@ const SearchForm = () => {
     };
   };
 
+  const resetValues = {
+    location: "",
+    airConditioner: false,
+    transmission: false,
+    kitchen: false,
+    TV: false,
+    shower: false,
+    formCamper: "",
+  };
+
   const onSearch = (values) => {
     setAllParams(values);
   };
 
   const onReset = (resetForm) => {
-    const resetValues = {
-      location: "",
-      airConditioner: false,
-      transmission: false,
-      kitchen: false,
-      TV: false,
-      shower: false,
-      formCamper: "",
-    };
     setAllParams(resetValues);
     resetForm();
   };
@@ -154,7 +155,6 @@ const SearchForm = () => {
                       id="TV"
                     />
                     <label className={css.labelBox} htmlFor="TV">
-                      S
                       <span>
                         <svg
                           className={css.airConditioner}
