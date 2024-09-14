@@ -32,7 +32,13 @@ const CatalogItem = ({ item }) => {
 
   return (
     <>
-      <img className={css.img} src={gallery[0]} alt={name} />
+      <img
+        className={css.img}
+        src={gallery[0]}
+        alt={name}
+        width="290px"
+        height="310px"
+      />
       <div className={css.content}>
         <div className={css.topBox}>
           <div className={css.nameAndPrice}>

@@ -52,9 +52,27 @@ const CamperModal = () => {
           </div>
         </div>
         <div className={css.imgBox}>
-          <img className={css.img} src={gallery[0]} alt={name} />
-          <img className={css.img} src={gallery[1]} alt={name} />
-          <img className={css.img} src={gallery[2]} alt={name} />
+          <img
+            className={css.img}
+            src={gallery[0]}
+            alt={name}
+            width="290px"
+            height="310px"
+          />
+          <img
+            className={css.img}
+            src={gallery[1]}
+            alt={name}
+            width="290px"
+            height="310px"
+          />
+          <img
+            className={css.img}
+            src={gallery[2]}
+            alt={name}
+            width="290px"
+            height="310px"
+          />
         </div>
         <p className={css.description}>{description}</p>
         <div className={css.bottomBox}>
